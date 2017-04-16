@@ -10,5 +10,5 @@
 	php artisan config:cache
 	php artisan route:cache
 	php artisan optimize
-	php artisan opcache:clear
+	php artisan cache:clear
 @endtask

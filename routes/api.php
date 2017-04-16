@@ -13,10 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware( 'auth:api' )->get( '/user', function ( Request $request ) {
-	return $request->user();
-} );
-
 Route::middleware( 'auth:api' )->get( '/genres', 'MoviesController@genresList');
 Route::middleware( 'auth:api' )->get( '/genre/{genreId}', 'MoviesController@genreMoviesList');
 Route::middleware( 'auth:api' )->get( '/popular', 'MoviesController@popularMoviesList');
