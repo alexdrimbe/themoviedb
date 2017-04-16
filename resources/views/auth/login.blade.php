@@ -34,7 +34,7 @@
 
                         <hr class="colorgraph"/>
                         <div class="row">
-                            <div class="col-xs-6 col-md-6 col-lg-6">
+                            <div class="col-xs-6 col-md-6 col-lg-6 mb-3">
                                 <input type="submit" class="btn btn-lg btn-success btn-block" value="Sign In"
                                 />
                             </div>
