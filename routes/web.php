@@ -11,10 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get( 'logout', 'Auth\LoginController@logout' );
+
+Route::middleware( 'auth' )->get( '/', 'PagesController@index' );
+Route::middleware( 'auth' )->get( '/movies/genres/{genreId}', 'PagesController@index' );
+Route::middleware( 'auth' )->get( '/movie/{movieId}', 'PagesController@index' );
+Route::middleware( 'auth' )->get( '/search/{searchTerm}', 'PagesController@index' );
+
+
